@@ -1,0 +1,32 @@
+<html>
+<body>
+<script>
+  alert("Welcome to the store!");
+
+  var name = prompt("What is your name?");
+  var item = prompt("What item do you want?");
+  var num = prompt("How many? (1-99)");
+
+  if (num < 1 || num > 99) {
+    num = prompt("Please pick a number from 1 to 99:");
+  }
+
+  var date = new Date();
+  var hour = date.getHours();
+  var greeting = "Good Evening";
+
+  if (hour < 12) {
+    greeting = "Good Morning";
+  } else if (hour < 18) {
+    greeting = "Good Afternoon";
+  }
+
+  date.setDate(date.getDate() + 7);
+
+  document.write(greeting + " " + name + ", Thank you for Ordering!<br>");
+  document.write("Item: " + item + "<br>");
+  document.write("Amount: " + num + "<br>");
+  document.write("It will arrive on " + date.toDateString());
+</script>
+</body>
+</html>
